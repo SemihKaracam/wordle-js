@@ -1,0 +1,76 @@
+*{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: var(--default);
+    font-family:'Times New Roman', Times, serif
+
+}
+
+:root{
+    --correct: #6AAA64;
+    --partially-correct: #C9B458;
+    --incorrect: #787C7E;
+    --border: #D3D6DA;
+    --default: #121213;
+
+}
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.container{
+    display: grid;
+    place-items: center;
+    height: 600px;
+}
+.container h1{
+    color: white;
+}
+
+#game{
+    display: grid;
+    /* grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr); */
+}
+
+
+.box{
+    height: 62px;
+    width: 62px;
+    border: 2px solid gray;
+    margin: 4px;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    /* animation: flipAnimation 1s infinite; */
+}
+
+
+.box.correct{
+    background-color: var(--correct);
+}
+.box.partially-correct{
+    background-color: var(--partially-correct);
+}
+.box.incorrect{
+    background-color: var(--incorrect);
+}
+
+
+@keyframes flipAnimation {
+    from{
+        transform:rotateX(0deg)
+    }
+    
+    to{
+        transform:rotateX(360deg)
+    }
+}
