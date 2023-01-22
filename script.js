@@ -1,5 +1,5 @@
-import { testDictionary } from "./words.js"
 
+const testDictionary = ['earth', 'plane', 'crane', 'audio', 'house', 'offer', 'often']
 var state = {
     currentRow: 0,
     currentColumn: 0,
